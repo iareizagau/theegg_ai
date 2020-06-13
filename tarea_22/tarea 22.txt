@@ -1,0 +1,7 @@
+Para resolver la tarea he seguido los siguientes pasos:
+1. Introducir los datos (peso del camión, lista de vacas)
+2. generar todas las combinaciones posibles
+3. calcular el máximo
+
+Para ejecutar el código es necesario tener python3.x y la librería pandas
+

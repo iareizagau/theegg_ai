@@ -51,7 +51,7 @@ class Lechero:
     def select_optimo(self):
         self.__init__data()
         self.combinations()
-        x = self.df.loc[self.df['kg_total'] == self.df['kg_total'].max()]
+        x = self.df.loc[self.df['litros_total'] == self.df['litros_total'].max()]
         id_list = x['id'].values[0].split('_')
 
         print('###########')
