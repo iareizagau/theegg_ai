@@ -6,7 +6,8 @@ Para resolver la tarea he seguido los siguientes pasos:
 Para ejecutar el código es necesario tener python3.x y la librería pandas
 Pasos a seguir:
 1. Crear un entorno virtual
-    pip install mkvirtualenv env
+    Pip install virtualenvwrapper-win
+    mkvirtualenv --python==path\to\python.exe envname --> C:\usuarios\xxxx\envs
 
 2. Activar entorno virtual
     workon env
