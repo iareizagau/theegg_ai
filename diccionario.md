@@ -1,5 +1,5 @@
 # Diccionario The Egg
-## Alan Turing *(Londres, 23 de junio de 1912-Wilmslow, Cheshire, 7 de junio de 1954)*
+## Alan Turing ###*(Londres, 23 de junio de 1912-Wilmslow, Cheshire, 7 de junio de 1954)*
 Uno de los padres de la ciencia de la computación.
 En el ámbito de IA es conocido el test de Turing,
 un criterio para juzgar si la inteligencia de la máquina
@@ -26,21 +26,21 @@ Ley empírica que expresa que cada dos años se duplica el número de transistor
 ### lenguaje de alto nivel
 ### lenguaje de máquina
 ### lenguaje de programación
-#### python
+* #### python
 Lenguaje de programación de alto nivel y multipropósito que actualmente tiene muchos usuarios y
 se utiliza mucho para IA
-#### R
+* #### R
 Lenguaje de programación de alto nivel que se usa mucho para temas de estadística
-#### Lisp
-#### Java
-#### javascript
+* #### Lisp
+* #### Java
+* #### javascript
 Lenguaje de programación de alto nivel que se usa para dar vida a las páginas web
-#### php
-#### html
+* #### php
+* #### html
 Lenguaje de programación para crear estructura y contenido para páginas web
-#### CSS
+* #### CSS
 Lenguaje de programación para la estética de las páginas web.
-#### SQL
+* #### SQL
 Lenguaje de programación para trabajar con bases de datos.
 ## hardware
 ###  raspberry pi
