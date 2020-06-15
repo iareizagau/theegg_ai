@@ -1,5 +1,6 @@
 # Diccionario The Egg
-## Alan Turing ###*(Londres, 23 de junio de 1912-Wilmslow, Cheshire, 7 de junio de 1954)*
+## Alan Turing
+*(Londres, 23 de junio de 1912-Wilmslow, Cheshire, 7 de junio de 1954)*
 Uno de los padres de la ciencia de la computación.
 En el ámbito de IA es conocido el test de Turing,
 un criterio para juzgar si la inteligencia de la máquina
@@ -43,15 +44,15 @@ Lenguaje de programación para la estética de las páginas web.
 * #### SQL
 Lenguaje de programación para trabajar con bases de datos.
 ## hardware
-###  raspberry pi
+* ###  raspberry pi
 Ordenador de placa reducida de bajo costo.
-###  arduino
+* ###  arduino
 Placa electrónica de bajo coste para acercar el uso de la electrónica y programación.
 
 ## repositorio de control de versiones
 Almacenamiento y gestión del código en la nube
-### github
+* ### github
 Plataforma de control de versiones git. Microsoft compró en 2018
-### gitlab
+* ### gitlab
 Servicio web de control de versiones basado en git
 
