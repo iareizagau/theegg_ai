@@ -19,30 +19,33 @@ class Fraction:
         not_valid = True
         while not_valid:
             print("Input a number between 0.0001 and 0.9999")
-            self.number = float(input("number: "))
+            try:
+                self.number = float(input("number: "))
+            except Exception as e:
+                print('Not valid number. {}'.format(e))
             not_valid = self.check_valid_number()
         self.irreducible_fraction()
 
     def check_valid_number(self):
         if 0.0001 <= self.number <= 0.9999:
             not_valid = False
-            if self.number * 10000 % 1 != 0:
-                print('Number not valid. Try again')
+            if round(self.number * 10000) % 1 != 0:
+                print('Error1. Number not valid. Try again')
                 not_valid = True
         else:
-            print('Number not valid. Try again')
+            print('Error2. Number not valid. Try again')
             not_valid = True
         return not_valid
 
     def irreducible_fraction(self):
         mcd = self.max_common_divisior()
         self.denominator = self.denominator_ini/mcd
-        self.numerator = self.number*self.denominator_ini/mcd
+        self.numerator = round(self.number*self.denominator_ini/mcd)
         print("{}/{} mcd = {}".format(self.numerator, self.denominator, mcd))
 
     def max_common_divisior(self):
         rest = 0
-        mcd = self.number*self.denominator_ini
+        mcd = round(self.number*self.denominator_ini)
         while self.denominator_ini > 0:
             rest = self.denominator_ini
             self.denominator_ini = mcd % self.denominator_ini
