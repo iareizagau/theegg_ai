@@ -97,3 +97,32 @@ Plataforma de control de versiones git. Microsoft compró en 2018
 * **Gitlab**
 Servicio web de control de versiones basado en git
 
+## Algoritmo de cifrado simétrico
+Clave de cifrado y de descifrado iguales
+## Algoritmo de cifrado asimétrico
+Clave de cifrado y de descifrado distintas
+## Funciones en programación
+
+## ETL (Extract, Transform, Load)
+Extraer datos crudos de diferentes orígenes, transformalos según nuestras necesidades y cargarlos
+a una base de datos orientada a procesos analíticos.
+* **Extracción:** Bases de datos (MySQL, PostgreSQL, ...), csv, excell, ...
+* **Transformacion:** Filtrar, eliminar, transormar datos, agrupar, ...
+* **Carga:** Cargar a la base de datos de analítica.
+![imagen_etl](imagenes/etl.png)
+
+## Bases de datos 
+Conjunto de datos de un mismo contexto almacenados para su posterior uso
+## Data preprocessing
+Acumulación y manipulación de datos para generar valor de los datos. 
+
+## API (Interfaz de Programación de Aplicaciones)
+Conjunto de subrutinas, funciones, procedimientos que ofrece una librería para ser utilizado por otro software
+como una capa de abstracción.
+
+## Estructuras de datos
+* **JSON (JavaScript Object Notation):** Formato de texto clave-valor para el intercambio de datos. {hola:'mundo'}
+* **XML (eXtensible Markup Language):** Metalenguaje que permite definir lenguajes de marcas.  
+## Protocolo de comunicación
+Sistema de reglas que permiten que diferentes entidades de un sistema de comunicación se comuniquen entre ellas para
+transmitir información. Regras que define la sintaxis, semántica y sincronización de la comunicación.
