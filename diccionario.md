@@ -126,3 +126,25 @@ como una capa de abstracción.
 ## Protocolo de comunicación
 Sistema de reglas que permiten que diferentes entidades de un sistema de comunicación se comuniquen entre ellas para
 transmitir información. Regras que define la sintaxis, semántica y sincronización de la comunicación.
+
+## Convertidor analógico digital 
+Dispositivo electrónico capaz de convertir una señal analógica (tensión o corriente) en una señal digital mediante 
+un cuantificador y codificandose en un código binario. Un código es la representación unívoca de los elementos.
+Cada valor numérico binario hace corresponder a un solo valor de tensión o corriente.
+
+## Transistores bipolares
+Dispositivo electrónico consistente en dos uniones PN muy cercanas entre si, que permite aumentar la corriente y 
+disminuir el voltaje.
+Regiones: 
+* Emisor
+* Base
+* Conector
+
+## Frecuencia de muestreo
+Número de muestras por unidad de tiempo que se toman de una señal continua para producir una señal discreta. 
+unidades: Herzios (Hz)
+## Sistema binario
+Sistema de numeración en el que los números se representan utilizando 0 y 1. Uno de los sistemas que se utilizan
+en los ordenadores.
+## Algebra booleana
+Estructura algebraica que esquematiza las operaciones lógicas.
