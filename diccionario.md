@@ -173,5 +173,13 @@ comunicarse en una red. Conectividad de extremo a extremo.
 
 ## Algoritmo 
 ## Diagrama de flujo 
+Representación gráfica de un algoritmo o proceso.
 ## Convención de programación
+Conjunto de directrices para un lenguaje de programación que recomienda estilo, prácticas y métodos de programación.
+(gestión de archivos, sangría, comentarios, declaraciones, sentencias, espaciado, nombres, ...)
 ## Bucles en programación
+Secuencia que se ejecuta repetidas veces por una instrucción de código.
+* while
+* for
+* do while
+

@@ -30,10 +30,12 @@ class Combate:
             if turno == 1:
                 self.pokemon2.vida = self.pokemon2.vida - self.pokemon1.ataque
                 turno = 0
+                print('ataca {}'.format(self.pokemon1.nombre))
 
             elif turno == 0:
                 self.pokemon1.vida = self.pokemon1.vida - self.pokemon2.ataque
                 turno = 1
+                print('ataca {}'.format(self.pokemon2.nombre))
             print('turno {} {} vida {} {} vida {}'.format(turno_count,
                                                           self.pokemon1.nombre,
                                                           self.pokemon1.vida,
