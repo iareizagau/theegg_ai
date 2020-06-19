@@ -29,7 +29,7 @@ class Lechero:
         self.n_vacas_venta = int(input('Nº de vacas en venta en Tolosa: '))
         self.lista_vacas = []
         for i in range(self.n_vacas_venta):
-            print('vaca {}'.format(i + 1))
+            print('vaca {}/{}'.format(i + 1, self.n_vacas_venta))
             self.lista_vacas.append(dict(id_vaca=i + 1, kg=float(input("Kg: ")), litros=float(input("litros/dia: "))))
 
     def combinations(self):

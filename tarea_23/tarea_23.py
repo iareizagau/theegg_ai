@@ -8,6 +8,8 @@ tipo String.
 2.- Una segunda función que recoja el mensaje cifrado y lo descifre utilizando este mismo algoritmo
 """
 import numpy as np
+import string
+
 
 def main():
     # frase = list(input('Escribe una frase: '))
@@ -23,7 +25,7 @@ def main():
 
 class Solitario:
     def __init__(self):
-        self.abc = list("abcdefghijklmnñopqrstuvxyz")
+        self.abc = list(string.ascii_lowercase)
         self.numeros = []
         self.baraja = []
         self.trebol = 0

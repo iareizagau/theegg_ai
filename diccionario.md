@@ -86,6 +86,8 @@ historia.
     * **html:** Lenguaje de programación para crear estructura y contenido para páginas web
     * **CSS:** Lenguaje de programación para la estética de las páginas web.
 * **SQL:** Lenguaje de programación para trabajar con bases de datos.
+* **NoSQL**Forma flexible de almacenar, ordenar y captar mayor cantidad de datos. (Cassandra, MongoDB,
+BigTable, ...)
 ## Hardware
 * **Raspberry pi:** Ordenador de placa reducida de bajo costo.
 * **Arduino:** Placa electrónica de bajo coste para acercar el uso de la electrónica y programación.
@@ -148,3 +150,28 @@ Sistema de numeración en el que los números se representan utilizando 0 y 1. U
 en los ordenadores.
 ## Algebra booleana
 Estructura algebraica que esquematiza las operaciones lógicas.
+
+## Arquitectura cliente servidor 
+Modelo de diseño de software en el que las tareas se reparten en:
+* **Servidores** Recursos
+* **Clientes** Demandantes
+
+## FTP (Protocolo Transferencia de Archivos)
+Protocolo de red para la transferencia de archivos entre sistemas conectados aa una red TCP, basado en la arquitectura
+cliente-servidor
+## Servidor web 
+Programa informático que procesa una aplicación del lado del servidor. Realiza conexione bidireccionales y 
+unidireccionales con el cliente. 
+## IP (Protocolo de Internet)
+Protocolo de comunicación de datos digitales clasificado funcionalmente en la capa de red.
+## DNS (Sistema de Nombres de Dominio)
+Los servidores DNS traducen la dirección de la web en una dirección IP para que el ordenador sepa a qué servidor tiene 
+que conectarse para acceder a los contenidos.
+## Protocolo TCP/IP (Transmission Control Protocol)
+Comunicaciones en redes, describe un conjunto de guías generales de operación para permitir que un equipo pueda 
+comunicarse en una red. Conectividad de extremo a extremo.
+
+## Algoritmo 
+## Diagrama de flujo 
+## Convención de programación
+## Bucles en programación
