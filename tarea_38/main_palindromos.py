@@ -17,7 +17,7 @@ def main():
             numero = int(input('Numero entero: '))
             for i in range(numero, 1000000):
                 pl = Palindromo(i)
-                if pl.palindromo() and pl.numero_primo():
+                if pl.palindromo() and pl.es_primo():
                     print('{} es Palindromo de {}'.format(numero, i))
                     es_palindromo = True
                     break
@@ -38,7 +38,6 @@ def main():
 class Palindromo:
     def __init__(self, number):
         self.number = number
-        pass
 
     def check_valid_number(self):
         if 1 <= self.number <= 1000000:
@@ -57,15 +56,25 @@ class Palindromo:
             return False
 
     def numero_primo(self):
-        count = 0
-        for i in range(1, self.number):
+        if self.number < 2:
+            return False
+        for i in range(2, self.number):
             print(i, self.number)
             if self.number % i == 0:
-                count += 1
-
-            if count > 2:
                 return False
         return True
+
+    def es_primo(self):
+        # Comprobamos si n es 2 (unico primo par)
+        if self.number == 2:
+            return True
+
+        # Comprobamos si es menor de 2 o es par
+        if self.number < 2 or not self.number % 2:
+            return False
+
+        # Comprobamos si es divisible entre cualquier entero impar entre 3 y sqrt(n)
+        return not any(self.number % i == 0 for i in range(3, int(self.number ** 0.5) + 1, 2))
 
     def __del__(self):
         pass

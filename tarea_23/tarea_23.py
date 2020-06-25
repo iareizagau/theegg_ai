@@ -61,7 +61,6 @@ class Solitario:
         suma_bool = self.suma > self.modulo
         self.suma = self.suma - suma_bool + self.modulo
 
-
     def encuentra_comodin_A(self):
         return self.baraja.index('A')
 
@@ -123,7 +122,6 @@ class Solitario:
     def corte_carta_primera(self):
         corte = self.num_1_53(self.primera_carta())
         a = self.baraja[:corte]
-
 
     def descifrado(self):
         pass

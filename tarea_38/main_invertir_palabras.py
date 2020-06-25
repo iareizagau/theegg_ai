@@ -21,24 +21,22 @@ def main():
         except Exception as e:
             print('Value not valid. Try again')
 
-    pass
-
 
 class InvertirPalabras:
     def __init__(self):
         self.n_frases = 0
-        pass
 
     def __init__data(self):
         self.frases = []
 
-    def numero_frases(self, n_frases):
+    def numero_frases(self):
         self.__init__data()
-        for i in range(n_frases):
+        for i in range(self.n_frases):
             self.frases.append(input('Frase {}: '.format(i+1)))
 
     def invertir(self, n_frases):
-        self.numero_frases(n_frases)
+        self.n_frases = n_frases
+        self.numero_frases()
         for i, frase in enumerate(self.frases):
             result = ' '.join(map(str, frase.split()[::-1]))
             print('Case #{}: {}'.format(i+1, result))
