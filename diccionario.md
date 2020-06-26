@@ -151,6 +151,21 @@ en los ordenadores.
 ## Algebra booleana
 Estructura algebraica que esquematiza las operaciones lógicas.
 
+## Algoritmo 
+Conjunto de instrucciones ordenadas que permite solucionar un problema, realizar tareas ...
+## Diagrama de flujo 
+Representación gráfica de un algoritmo o proceso.
+## Convención de programación
+Conjunto de directrices para un lenguaje de programación que recomienda estilo, prácticas y métodos de programación.
+(gestión de archivos, sangría, comentarios, declaraciones, sentencias, espaciado, nombres, ...)
+## Bucles en programación
+Secuencia que se ejecuta repetidas veces por una instrucción de código.
+* while
+* for
+* do while
+
+# REDES
+
 ## Arquitectura cliente servidor 
 Modelo de diseño de software en el que las tareas se reparten en:
 * **Servidores** Recursos
@@ -164,22 +179,36 @@ Programa informático que procesa una aplicación del lado del servidor. Realiza
 unidireccionales con el cliente. 
 ## IP (Protocolo de Internet)
 Protocolo de comunicación de datos digitales clasificado funcionalmente en la capa de red.
+* **Dirección-IP:** Número que identifica a los equipos o dipositivos de una red.
+* **IP pública:** Direccion que te asigna tu ISP para identificarte dentro de Internet.
+* **IP privada:** Se utiliza para identificar equipos o dispositivos dentro de una red doméstica o privada.
 ## DNS (Sistema de Nombres de Dominio)
 Los servidores DNS traducen la dirección de la web en una dirección IP para que el ordenador sepa a qué servidor tiene 
 que conectarse para acceder a los contenidos.
-## Protocolo TCP/IP (Transmission Control Protocol)
+
+## Protocolos de comunicación
+### Protocolo TCP/IP (Transmission Control Protocol)
 Comunicaciones en redes, describe un conjunto de guías generales de operación para permitir que un equipo pueda 
 comunicarse en una red. Conectividad de extremo a extremo.
+### Protocolo UDP (User Datagram Protocol)
+Protocolo nivel de transporte basado en el intercambio de datagramas. Permite el envio de datagramas a través de
+la red sin que se haya establecido previamente una conexión.
 
-## Algoritmo 
-## Diagrama de flujo 
-Representación gráfica de un algoritmo o proceso.
-## Convención de programación
-Conjunto de directrices para un lenguaje de programación que recomienda estilo, prácticas y métodos de programación.
-(gestión de archivos, sangría, comentarios, declaraciones, sentencias, espaciado, nombres, ...)
-## Bucles en programación
-Secuencia que se ejecuta repetidas veces por una instrucción de código.
-* while
-* for
-* do while
+## Internet
+Conjunto descentralizado de redes de comunicación interconectada.
+## red WAN (Wide Area Network)
+Red de máquinas que une varias redes locales. Son construidas por organizaciones o empresas para su uso privado.
+## red LAN (Local Area Network)
+Red de máquinas que abarca una reducida área, una casa, un departamento...
+
+## Máscara de subred
+Identifica la parte fija de la IP de la parte variable.
+
+## Dispositivos de red 
+* **router:** Dispositivo para conectar redes diferentes
+* **Switch:** Dispositivo de red inteligente. Sabe cada mensaje a qué máquina tiene que enviar- 
+ 
+
+
+
 
