@@ -54,7 +54,8 @@ class Fraction:
         return mcd
 
     def __del__(self):
-        print('Delete {} instance'.format(self.__class__.__name__))
+        pass
+        # print('Delete {} instance'.format(self.__class__.__name__))
 
 
 if __name__ == "__main__":

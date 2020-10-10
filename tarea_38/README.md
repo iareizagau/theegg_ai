@@ -8,9 +8,13 @@ guanina (G) y timina (T):
 Para el ejemplo anterior, el resultado es CTTCCT porque que es el conjunto ordenado de bases adyacentes de mayor tamaño
  que se encuentra en ambas formas de vida.
 >### Ejemplos de entradas y salidas
->* **Entrada:** ctgactga actgagc         **Salida:** actga
->* **Entrada:** cgtaattgcgat cgtacagtagc **Salida:**  cgta
->* **Entrada:** ctgggccttgaggaaaactg gtaccagtactgatagt **Salida:** actg
+
+| Entrada      | Salida |
+| ----------- | ----------- |
+| ctgactga actgagc      | actga       |
+| cgtaattgcgat cgtacagtagc   | cgta        | 
+| ctgggccttgaggaaaactg gtaccagtactgatagt   | actg        |
+
 >![imagen_etl](tarea38_el_biologo.JPG)
 
 ## Invertir palabras

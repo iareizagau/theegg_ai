@@ -18,6 +18,7 @@ def main():
     frase = [2, 4, 6, 'B', 5, 8, 7, 1, 'A', 3, 9]
     frase = ['B', 5, 8, 7, 1, 'A', 3, 9]
     frase = 'hola imanol'
+    frase = '3A8B69'
     solitario = Solitario()
     solitario.cifrado(frase)
     pass
@@ -26,6 +27,7 @@ def main():
 class Solitario:
     def __init__(self):
         self.abc = list(string.ascii_lowercase)
+        print(self.abc)
         self.numeros = []
         self.baraja = []
         self.trebol = 0
@@ -40,11 +42,11 @@ class Solitario:
         self.tipo = ''
 
     def cifrado(self, frase):
-        self.baraja = list(''.join(frase.lower().split()))
+        self.baraja = list(''.join(frase.split()))
         print(self.baraja)
-        self.letras2numeros()
-        # self.intercambiar_comodin_A()
-        # self.intercambiar_comodin_B()
+        # self.letras2numeros()
+        self.intercambiar_comodin_A()
+        self.intercambiar_comodin_B()
         self.cortar_barra_en_3()
 
     def letras2numeros(self):
@@ -66,18 +68,32 @@ class Solitario:
 
     def intercambiar_comodin_A(self):
         index = self.encuentra_comodin_A()
-        self.baraja.pop(index)
+        if index == len(self.baraja)-1:
+            self.baraja.pop(index)
+            index = 0
+        else:
+            self.baraja.pop(index)
+
         self.baraja.insert(index + 1, 'A')
-        print(self.baraja)
+        print('Intercambiar comodin A {}'.format(self.baraja))
 
     def encuentra_comodin_B(self):
         return self.baraja.index('B')
 
     def intercambiar_comodin_B(self):
         index = self.encuentra_comodin_B()
-        self.baraja.pop(index)
-        self.baraja.insert(index + 2, 'B')
-        print(self.baraja)
+        if index == len(self.baraja)-1:
+            self.baraja.pop(index)
+            index = 0
+            self.baraja.insert(index + 2, 'B')
+        elif index == len(self.baraja)-2:
+            self.baraja.pop(index)
+            index = 1
+            self.baraja.insert(index, 'B')
+        else:
+            self.baraja.pop(index)
+            self.baraja.insert(index + 2, 'B')
+        print('Intercambiar comodin B {}'.format(self.baraja))
 
     def cortar_barra_en_3(self):
         index_max = max(self.encuentra_comodin_A(), self.encuentra_comodin_B())
@@ -86,7 +102,7 @@ class Solitario:
         bar.extend(self.baraja[index_max+1:])
         bar.extend(self.baraja[index_min:index_max+1])
         bar.extend(self.baraja[:index_min])
-        print(bar)
+        print('cortar_barra_en_3 {}'.format(bar))
         pass
 
     def ultima_carta(self):

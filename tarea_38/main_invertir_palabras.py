@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Dada una serie de palabras separadas por espacios, escribir la frase formada por las mismas palabras en orden inverso.
 Cada palabra estará formada exclusivamente por letras, y existirá exactamente un espacio entre cada pareja de palabras.
