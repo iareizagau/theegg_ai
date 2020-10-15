@@ -12,7 +12,6 @@ guanina (G) y timina (T):
 Para el ejemplo anterior, el resultado es CTTCCT porque que es el conjunto ordenado de bases adyacentes de mayor tamaño
  que se encuentra en ambas formas de vida.
 >### Ejemplos de entradas y salidas
-
 | Entrada      | Salida |
 | ----------- | ----------- |
 | ctgactga actgagc      | actga       |
@@ -30,7 +29,6 @@ Para el ejemplo anterior, el resultado es CTTCCT porque que es el conjunto orden
 Cada palabra estará formada exclusivamente por letras, y existirá exactamente un espacio entre cada pareja de palabras.
 La salida debe ser "Case #" seguido del número de caso, de un símbolo de "dos puntos", de un espacio en blanco
 y de la frase invertida.
-
 >### Ejemplos de entradas y salidas
 | Entrada      | Salida |
 | ----------- | ----------- |
@@ -53,7 +51,6 @@ Un solo entero N, (1 <= N <= 1.000.000), en una sola línea.
 Formato de salida:
 Su salida debe consistir en un solo número entero, el más pequeño palíndromo primo mayor que o igual a N.
 >### Ejemplos de entradas y salidas
-
 | Entrada      | Salida |
 | ----------- | ----------- |
 | 31      | 101       |
