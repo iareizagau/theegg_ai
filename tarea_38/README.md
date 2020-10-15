@@ -24,6 +24,8 @@ Cada palabra estará formada exclusivamente por letras, y existirá exactamente 
 La salida debe ser "Case #" seguido del número de caso, de un símbolo de "dos puntos", de un espacio en blanco
 y de la frase invertida.
 
+<div align="center">
+
 >### Ejemplos de entradas y salidas
 | Entrada      | Salida |
 | ----------- | ----------- |
@@ -32,7 +34,10 @@ y de la frase invertida.
 | all your base  | base your all   |
 
 >![imagen_etl](tarea38_invertirpalabras.JPG)
- 
+
+</div>
+
+ </p>
 
 ## Palíndromos
 >Un entero se dice que es un palíndromo si es igual al número que se obtiene al invertir el orden de sus cifras.
