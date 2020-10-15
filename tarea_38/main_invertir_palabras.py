@@ -14,7 +14,7 @@ def main():
             n_frases = int(input('Cantidad de valores que se van a analizar: '))
             palabras.invertir(n_frases)
             try:
-                op = int(input('Seguir comparando secuencias de adn? SI (1) NO (anything else)'))
+                op = int(input('Seguir con otras frases? SI (1) NO (anything else)'))
                 if op != 1:
                     break
             except Exception as e:

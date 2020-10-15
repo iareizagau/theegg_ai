@@ -16,7 +16,6 @@ Para el ejemplo anterior, el resultado es CTTCCT porque que es el conjunto orden
 | ctgggccttgaggaaaactg gtaccagtactgatagt   | actg        |
 
 
-
 >![imagen_etl](tarea38_el_biologo.JPG)
 
 ## Invertir palabras
@@ -30,7 +29,10 @@ y de la frase invertida.
 | ----------- | ----------- |
 | this is a test      | test a is this       |
 | foobar  | foobar   | 
-| all your base  | base your all   | 
+| all your base  | base your all   |
+
+>![imagen_etl](tarea38_invertirpalabras.JPG)
+ 
 
 ## Palíndromos
 >Un entero se dice que es un palíndromo si es igual al número que se obtiene al invertir el orden de sus cifras.
@@ -46,4 +48,7 @@ Su salida debe consistir en un solo número entero, el más pequeño palíndromo
 | Entrada      | Salida |
 | ----------- | ----------- |
 | 31      | 101       |
-| 456789  | 1003001   | 
+| 456789  | 1003001   |
+
+>![imagen_etl](tarea38_palindromo.JPG)
+ 
