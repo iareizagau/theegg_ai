@@ -7,139 +7,188 @@ enteros, flotantes, booleanos, ... y en este caso la variable o parámetro que s
 tipo String.
 2.- Una segunda función que recoja el mensaje cifrado y lo descifre utilizando este mismo algoritmo
 """
-import numpy as np
 import string
+import random
 
 
 def main():
-    # frase = list(input('Escribe una frase: '))
-    frase = ['A', 7, 2, 'B', 9, 4, 1]
-    frase = [3, 'A', 'B', 8, 9, 6]
-    frase = [2, 4, 6, 'B', 5, 8, 7, 1, 'A', 3, 9]
-    frase = ['B', 5, 8, 7, 1, 'A', 3, 9]
-    frase = 'hola imanol'
-    frase = '3A8B69'
-    solitario = Solitario()
-    solitario.cifrado(frase)
-    pass
+    sentence = input('Introduce sentence to encrypt: ')
+
+    solitary = Solitary()
+    encrypt = solitary.encrypt(sentence)
+    decoded = solitary.decoded()
+    adjust = len(sentence) + 5
+    print('sentence'.ljust(adjust), 'encrypt'.ljust(adjust), 'decoded'.ljust(adjust))
+    print(sentence.ljust(adjust), encrypt.ljust(adjust), decoded.ljust(adjust))
 
 
-class Solitario:
+class Solitary:
     def __init__(self):
         self.abc = list(string.ascii_lowercase)
-        print(self.abc)
-        self.numeros = []
-        self.baraja = []
-        self.trebol = 0
-        self.diamantes = 13
-        self.corazones = 26
-        self.picas = 39
+        self.numbers = []
+        self.cards = []
+        self.cards_original = []
+        self.cards_number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+                             1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+                             1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+                             1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        self.trebol_min = 0
+        self.trebol_max = 13
+        self.diamantes_min = 13
+        self.diamantes_max = 26
+        self.corazones_min = 26
+        self.corazones_max = 39
+        self.picas_min = 39
+        self.picas_max = 52
         self.comodin = 53
         self.solitario = []
         self.suma = []
         self.modulo = 26
         self.numeros_fin = []
         self.tipo = ''
+        self.sentence = ''
+        self.new_list = []
+        self.last_card = 0
+        self.sum_number = 0
+        self.result = []
+        self.new_list = []
+        self.encrypted_sentence = []
 
-    def cifrado(self, frase):
-        self.baraja = list(''.join(frase.split()))
-        print(self.baraja)
-        # self.letras2numeros()
-        self.intercambiar_comodin_A()
-        self.intercambiar_comodin_B()
+    def init_encryption(self, sentence):
+        self.sentence = list(''.join(sentence.replace(' ', '').split()))
+        self.create_deck()
+        self.shuffle()
+        self.cards_original = self.cards.copy()
+        self.letters2numbers()
+
+    def init_decoded(self):
+        self.sentence = self.encrypted_sentence
+        self.cards = self.cards_original
+        self.letters2numbers()
+
+    def find_key(self):
+        self.change_joker_a()
+        self.change_joker_b()
         self.cortar_barra_en_3()
+        self.cut_last_card()
+        key = self.cut_firs_card()
+        return key
 
-    def letras2numeros(self):
-        self.numeros = [self.abc.index(letra)+1 for letra in self.baraja]
+    def create_deck(self):
+        self.cards = [element for element in range(1, 27)]
+        self.add_joker()
 
-        print(self.numeros)
-        print(len(self.baraja), len(self.numeros))
+    def add_joker(self):
+        self.cards.append('A')
+        self.cards.append('B')
 
-    def numeros2letras(self):
-        frase_fin = [self.abc[numero-1] for numero in self.numeros_fin]
+    def shuffle(self):
+        random.shuffle(self.cards)
 
-    def sumar_original_solitario(self):
-        self.suma = np.array(self.numeros) + np.array(self.solitario)
-        suma_bool = self.suma > self.modulo
-        self.suma = self.suma - suma_bool + self.modulo
+    def letters2numbers(self):
+        self.numbers = [self.abc.index(letters) + 1 for letters in self.sentence]
 
-    def encuentra_comodin_A(self):
-        return self.baraja.index('A')
+    def numbers2letters(self):
+        self.encrypted_sentence = [self.abc[number - 1] for number in self.new_list]
 
-    def intercambiar_comodin_A(self):
-        index = self.encuentra_comodin_A()
-        if index == len(self.baraja)-1:
-            self.baraja.pop(index)
+    def index_joker_a(self):
+        return self.cards.index('A')
+
+    def change_joker_a(self):
+        index = self.index_joker_a()
+        if index == len(self.cards)-1:
             index = 0
-        else:
-            self.baraja.pop(index)
+        self.cards.pop(index)
+        self.cards.insert(index + 1, 'A')
 
-        self.baraja.insert(index + 1, 'A')
-        print('Intercambiar comodin A {}'.format(self.baraja))
+    def index_joker_b(self):
+        return self.cards.index('B')
 
-    def encuentra_comodin_B(self):
-        return self.baraja.index('B')
-
-    def intercambiar_comodin_B(self):
-        index = self.encuentra_comodin_B()
-        if index == len(self.baraja)-1:
-            self.baraja.pop(index)
+    def change_joker_b(self):
+        index = self.index_joker_b()
+        self.cards.pop(index)
+        if index == len(self.cards)-1:
             index = 0
-            self.baraja.insert(index + 2, 'B')
-        elif index == len(self.baraja)-2:
-            self.baraja.pop(index)
+            self.cards.insert(index + 2, 'B')
+        elif index == len(self.cards)-2:
             index = 1
-            self.baraja.insert(index, 'B')
+            self.cards.insert(index, 'B')
         else:
-            self.baraja.pop(index)
-            self.baraja.insert(index + 2, 'B')
-        print('Intercambiar comodin B {}'.format(self.baraja))
+            self.cards.insert(index + 2, 'B')
 
     def cortar_barra_en_3(self):
-        index_max = max(self.encuentra_comodin_A(), self.encuentra_comodin_B())
-        index_min = min(self.encuentra_comodin_A(), self.encuentra_comodin_B())
-        bar = []
-        bar.extend(self.baraja[index_max+1:])
-        bar.extend(self.baraja[index_min:index_max+1])
-        bar.extend(self.baraja[:index_min])
-        print('cortar_barra_en_3 {}'.format(bar))
-        pass
+        index_max = max(self.index_joker_a(), self.index_joker_b())
+        index_min = min(self.index_joker_a(), self.index_joker_b())
 
-    def ultima_carta(self):
-        return self.baraja[-1]
+        self.new_list = (self.cards[index_max + 1:])
+        self.new_list.extend(self.cards[index_min:index_max + 1])
+        self.new_list.extend(self.cards[:index_min])
+        self.cards = self.new_list
 
-    def num_1_53(self, carta):
-        sum = 0
-        if carta == ('A' or 'B'):
-            self.tipo = 'comodin'
-            sum = 53
-        if 0 <= carta <= 13:
-            self.tipo = 'trebol'
-            sum = 0
-        elif 13 < carta <= 26:
-            self.tipo = 'diamantes'
-            sum = 13
-        elif 26 < carta <= 39:
-            self.tipo = 'corazones'
-            sum = 26
-        elif 39 < carta <= 52:
-            self.tipo = 'picas'
-            sum = 39
+    def num_1_53(self, card):
+        self.sum_number = 0
+        if card == 'A' or card == 'B' or card >= 53:
+            self.tipo = 'joker'
+            self.sum_number = 53
+            card_value = 0
+        else:
+            card_value = self.cards_number[card]
+            if self.trebol_min <= card <= self.trebol_max:
+                self.tipo = 'trebol'
+                self.sum_number = 0
+            elif self.diamantes_min < card <= self.diamantes_max:
+                self.tipo = 'diamantes'
+                self.sum_number = 13
+            elif self.corazones_min < card <= self.corazones_max:
+                self.tipo = 'corazones'
+                self.sum_number = 26
+            elif self.picas_min < card <= self.picas_max:
+                self.tipo = 'picas'
+                self.sum_number = 39
+            else:
+                self.sum_number = 53
+                card_value = 0
 
-        return self.ultima_carta() + sum
+        return card_value + self.sum_number
 
-    def cortar_carta_ulitma(self):
-        corte = self.num_1_53(self.ultima_carta())
-        a = self.baraja[:corte]
+    def cut_last_card(self):
+        cut = self.num_1_53(self.cards[-1])
+        self.new_list = self.cards[:cut]
+        self.new_list.extend(self.cards[cut:-1])
+        self.new_list.append(self.cards[-1])
+        self.cards = self.new_list
 
-    def primera_carta(self):
-        return self.baraja[0]
+    def cut_firs_card(self):
+        try:
+            cut = self.num_1_53(self.cards[0])
+            card = 53 if cut == 53 else self.cards[cut:][0]
+            output = self.num_1_53(card)
+        except Exception as e:
+            print('Error {}'.format(e))
+            output = 0
+        return output
 
-    def corte_carta_primera(self):
-        corte = self.num_1_53(self.primera_carta())
-        a = self.baraja[:corte]
+    def encrypt(self, sentence):
+        self.init_encryption(sentence)
+        for i in range(len(self.sentence)):
+            self.result.append(self.find_key())
+        sum_ = [x + y for x, y in zip(self.numbers, self.result)]
+        self.new_list = [item - 26 if item > 26 else item for item in sum_]
+        self.new_list = [item - 26 if item > 26 else item for item in self.new_list]
+        self.numbers2letters()
+        return ''.join(self.encrypted_sentence)
 
-    def descifrado(self):
+    def decoded(self):
+        self.init_decoded()
+        for i in range(len(self.sentence)):
+            self.result.append(self.find_key())
+        subtract = [x - y for x, y in zip(self.numbers, self.result)]
+        self.new_list = [item + 26 if item < 0 else item for item in subtract]
+        self.new_list = [item + 26 if item < 0 else item for item in self.new_list]
+        self.numbers2letters()
+        return ''.join(self.encrypted_sentence)
+
+    def __del__(self):
         pass
 
 
