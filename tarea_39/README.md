@@ -38,7 +38,7 @@ Crear subred: bits de host asignar a la porción de red
 con 4 bits prestados de la porción de host --> 2^4 = 16 subredes --> máscara: 255.240.0.0
 con 3 bits prestados de la porción de host --> 2^3 = 8 subredes --> máscara: 255.255.255.224
 >Red: 192.168.168.0
-Subredes
+>Subredes
     * 192.168.168.0
     * 192.168.168.32
     * 192.168.168.64
