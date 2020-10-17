@@ -1,6 +1,6 @@
 # Tarea 39 - Simulador de Redes
 
-[![Watch the video](ejercicio.jpg)](https://www.youtube.com/watch?v=lEKR7WtKzDA)
+
 
 Para realizar la tarea debes utilizar Packet Tracer de Cisco:
 1. Instalar el software en tu ordenador.
@@ -12,6 +12,8 @@ anteriores tareas.
     3.3. Red VLAN básica
     3.4. Unir dos redes VLAN con un router
     3.5. Enrutamiento estático
+
+[![Watch the video](ejercicio.jpg)](https://www.youtube.com/watch?v=lEKR7WtKzDA)
 
 
 ## Clases de Direcciones IPV4
@@ -31,16 +33,17 @@ anteriores tareas.
 subred: division de red más grande
 Crear subred: bits de host asignar a la porción de red
 
+## Ejemplos
+
 con 4 bits prestados de la porción de host --> 2^4 = 16 subredes --> máscara: 255.240.0.0
 con 3 bits prestados de la porción de host --> 2^3 = 8 subredes --> máscara: 255.255.255.224
-
-Red: 192.168.168.0
+>Red: 192.168.168.0
 Subredes
-* 192.168.168.0
-* 192.168.168.32
-* 192.168.168.64
-* 192.168.168.96
-* 192.168.168.128
-* 192.168.168.160
-* 192.168.168.192
-* 192.168.168.224
+    * 192.168.168.0
+    * 192.168.168.32
+    * 192.168.168.64
+    * 192.168.168.96
+    * 192.168.168.128
+    * 192.168.168.160
+    * 192.168.168.192
+    * 192.168.168.224
