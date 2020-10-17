@@ -1,7 +1,7 @@
 # Tarea 38
 
 ## Para ejecutar el programa
-* Python3.xy la librería pandas
+* Python3.x y la librería pandas
 
 Pasos a seguir:
 1. Crear un entorno virtual

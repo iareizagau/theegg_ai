@@ -1,6 +1,7 @@
 # Tarea 23 - Algoritmo Solitario
 
-Para ejecutar el código es necesario tener python3.x
+## Para ejecutar el programa
+* Python3.x
 
 ## Construir una comunicación cifrada entre dos funciones utilizando el algoritmo del solitario:
 1. Función 1: Enviar una frase para que la función lo cifre mediante el solitario. 
