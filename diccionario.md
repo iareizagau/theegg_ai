@@ -209,7 +209,11 @@ Identifica la parte fija de la IP de la parte variable.
 * **Switch:** Dispositivo de red inteligente. Sabe cada mensaje a qué máquina tiene que enviar-
 
 ## Redes informáticas
- 
+Redes de comunicaciones de datos de un número de sistemas informáticos conectados entre sí mediante
+una serie de dispositivos alámbricos o inalámbricos. Comparten información en paquete de datos, 
+transmitidos mediante impulsos eléctricos.
+Cuentan con emisor, receptor, un mensaje y un medio para transmitir, una serie de códigos/protocolos.
+
  
 
 
