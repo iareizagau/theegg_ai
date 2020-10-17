@@ -29,8 +29,8 @@ e.- Enrutamiento estático
 subred: division de red más grande
 Crear subred: bits de host asignar a la porción de red
 
-con 4 bits prestados de la porción de host --> 2**4 = 16 subredes --> máscara: 255.240.0.0
-con 3 bits prestados de la porción de host --> 2**3 = 8 subredes --> máscara: 255.255.255.224
+con 4 bits prestados de la porción de host --> 2^4 = 16 subredes --> máscara: 255.240.0.0
+con 3 bits prestados de la porción de host --> 2^3 = 8 subredes --> máscara: 255.255.255.224
 
 Red: 192.168.168.0
 Subredes
