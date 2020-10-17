@@ -5,11 +5,11 @@ Para realizar la tarea debes utilizar Packet Tracer de Cisco:
 2. Empezar a entender cómo trabajar con este software y a profundizar en conceptos adquiridos en
 anteriores tareas.
 3. Montar en el simulador las siguientes redes (añadimos links con la resolución):
-    3. Red con servidor web y servidor de DNS
-    3. Red con servidor DHCP
-    3. Red VLAN básica
-    3. Unir dos redes VLAN con un router
-    3. Enrutamiento estático
+    1. Red con servidor web y servidor de DNS
+    1. Red con servidor DHCP
+    1. Red VLAN básica
+    1. Unir dos redes VLAN con un router
+    1. Enrutamiento estático
 
 [![Watch the video](ejercicio.jpg)](https://www.youtube.com/watch?v=lEKR7WtKzDA)
 
