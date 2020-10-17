@@ -1,6 +1,25 @@
 # Tarea 38
 
+## Para ejecutar el programa
+* Python3.xy la librería pandas
 
+Pasos a seguir:
+1. Crear un entorno virtual
+    Pip install virtualenvwrapper-win
+    mkvirtualenv --python==path\to\python.exe envname --> C:\usuarios\xxxx\envs
+
+2. Activar entorno virtual
+    workon env
+
+3. Instalar librerías
+    cd path/to/requermients.txt
+    pip install -r requeriments.txt
+
+4. Ejecutar el código
+    cd path/to/file.py
+    workon env
+    python file.py
+    
 ## El biólogo
 <div align="center">
 
