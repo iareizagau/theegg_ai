@@ -17,6 +17,7 @@ e.- Enrutamiento estático
 ## Clases de Direcciones IPV4
 
 <div align="center">
+
 | Clases | Redes            | Red     | Host    | primer octeto | Máscara      | 
 | ----| ------------------- |---------|---------|---------------|--------------|
 | A   | interntet grandes   | 8 bits  | 24 bits | 0 - 127       |255.0.0.0     |
@@ -24,6 +25,7 @@ e.- Enrutamiento estático
 | C   | interntet pequeñas  | 24 bits | 8 bits  | 192 - 223     |255.255.255.0 |
 | D   | multicast           |         |         | 224 - 239     |              |
 | E   | experimentales      |         |         | 240 - 255     |              |
+
 </div>
 
 subred: division de red más grande
