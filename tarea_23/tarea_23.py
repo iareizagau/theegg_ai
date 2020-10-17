@@ -57,7 +57,7 @@ class Solitary:
     def init_encryption(self, sentence):
         self.sentence = list(''.join(sentence.replace(' ', '').split()))
         self.create_deck()
-        self.shuffle()
+        self.shuffle_clave()
         self.cards_original = self.cards.copy()
         self.letters2numbers()
 
@@ -69,7 +69,7 @@ class Solitary:
     def find_key(self):
         self.change_joker_a()
         self.change_joker_b()
-        self.cortar_barra_en_3()
+        self.cut_deck_in_3()
         self.cut_last_card()
         key = self.cut_firs_card()
         return key
@@ -82,7 +82,7 @@ class Solitary:
         self.cards.append('A')
         self.cards.append('B')
 
-    def shuffle(self):
+    def shuffle_clave(self):
         random.shuffle(self.cards)
 
     def letters2numbers(self):
@@ -116,7 +116,7 @@ class Solitary:
         else:
             self.cards.insert(index + 2, 'B')
 
-    def cortar_barra_en_3(self):
+    def cut_deck_in_3(self):
         index_max = max(self.index_joker_a(), self.index_joker_b())
         index_min = min(self.index_joker_a(), self.index_joker_b())
 

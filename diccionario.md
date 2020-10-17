@@ -206,7 +206,10 @@ Identifica la parte fija de la IP de la parte variable.
 
 ## Dispositivos de red 
 * **router:** Dispositivo para conectar redes diferentes
-* **Switch:** Dispositivo de red inteligente. Sabe cada mensaje a qué máquina tiene que enviar- 
+* **Switch:** Dispositivo de red inteligente. Sabe cada mensaje a qué máquina tiene que enviar-
+
+## Redes informáticas
+ 
  
 
 
