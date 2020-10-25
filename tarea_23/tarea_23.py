@@ -53,17 +53,19 @@ class Solitary:
         self.result = []
         self.new_list = []
         self.encrypted_sentence = []
+        self.clave = ''
 
     def init_encryption(self, sentence):
         self.sentence = list(''.join(sentence.replace(' ', '').split()))
         self.create_deck()
-        self.shuffle_clave()
+        self.shuffle_clave(frase=input('frase clave: '))
         self.cards_original = self.cards.copy()
         self.letters2numbers()
 
     def init_decoded(self):
         self.sentence = self.encrypted_sentence
-        self.cards = self.cards_original
+        # self.cards = self.cards_original
+        self.shuffle_clave()
         self.letters2numbers()
 
     def find_key(self):
@@ -71,7 +73,7 @@ class Solitary:
         self.change_joker_b()
         self.cut_deck_in_3()
         self.cut_last_card()
-        key = self.cut_firs_card()
+        key = self.cut_first_card()
         return key
 
     def create_deck(self):
@@ -82,11 +84,27 @@ class Solitary:
         self.cards.append('A')
         self.cards.append('B')
 
-    def shuffle_clave(self):
-        random.shuffle(self.cards)
+    def shuffle_clave(self, frase=''):
+        self.clave = self.clave if frase == '' else frase
+        self.create_deck()
+        self.letters2numbers()
+        for i in range(len(self.clave)):
+            self.change_joker_a()
+            self.change_joker_b()
+            self.cut_deck_in_3()
+            self.cut_last_card()
+            self.cut_letter_value(i)
+        self.cards.remove('A')
+        self.cards.remove('B')
+        self.cards.insert(self.numbers_clave[-1], 'A')
+        self.cards.insert(self.numbers_clave[-2], 'B')
+
+    # def shuffle_clave_(self):
+    #     random.shuffle(self.cards)
 
     def letters2numbers(self):
         self.numbers = [self.abc.index(letters) + 1 for letters in self.sentence]
+        self.numbers_clave = [self.abc.index(letters) + 1 for letters in self.clave]
 
     def numbers2letters(self):
         self.encrypted_sentence = [self.abc[number - 1] for number in self.new_list]
@@ -151,14 +169,21 @@ class Solitary:
 
         return card_value + self.sum_number
 
-    def cut_last_card(self):
-        cut = self.num_1_53(self.cards[-1])
+    def new_list_(self, cut):
         self.new_list = self.cards[:cut]
         self.new_list.extend(self.cards[cut:-1])
         self.new_list.append(self.cards[-1])
         self.cards = self.new_list
 
-    def cut_firs_card(self):
+    def cut_letter_value(self, i):
+        cut = self.num_1_53(self.numbers_clave[i])
+        self.new_list_(cut)
+
+    def cut_last_card(self):
+        cut = self.num_1_53(self.cards[-1])
+        self.new_list_(cut)
+
+    def cut_first_card(self):
         try:
             cut = self.num_1_53(self.cards[0])
             card = 53 if cut == 53 else self.cards[cut:][0]
