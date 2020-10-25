@@ -11,7 +11,6 @@ anteriores tareas.
     1. Unir dos redes VLAN con un router
     1. Enrutamiento estático
 
-[![Watch the video](ejercicio.jpg)](https://www.youtube.com/watch?v=lEKR7WtKzDA)
 
 
 ## Clases de Direcciones IPV4

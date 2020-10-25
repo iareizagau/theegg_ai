@@ -9,7 +9,7 @@ def main():
     bn = Binario()
     op = 1
     while op == 1:
-        decimal, binario = bn.decimal2binario()
+        binario, decimal = bn.decimal2binario()
         print('decimal {} binario {}'.format(decimal, binario))
         try:
             op = int(input('Try again? YES (1) NO (anything else): '))

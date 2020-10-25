@@ -173,8 +173,8 @@ class Solitary:
         for i in range(len(self.sentence)):
             self.result.append(self.find_key())
         sum_ = [x + y for x, y in zip(self.numbers, self.result)]
-        self.new_list = [item - 26 if item > 26 else item for item in sum_]
-        self.new_list = [item - 26 if item > 26 else item for item in self.new_list]
+        self.new_list = [item - len(self.abc) if item > len(self.abc) else item for item in sum_]
+        self.new_list = [item - len(self.abc) if item > len(self.abc) else item for item in self.new_list]
         self.numbers2letters()
         return ''.join(self.encrypted_sentence)
 
@@ -183,8 +183,8 @@ class Solitary:
         for i in range(len(self.sentence)):
             self.result.append(self.find_key())
         subtract = [x - y for x, y in zip(self.numbers, self.result)]
-        self.new_list = [item + 26 if item < 0 else item for item in subtract]
-        self.new_list = [item + 26 if item < 0 else item for item in self.new_list]
+        self.new_list = [item + len(self.abc) if item < 0 else item for item in subtract]
+        self.new_list = [item + len(self.abc) if item < 0 else item for item in self.new_list]
         self.numbers2letters()
         return ''.join(self.encrypted_sentence)
 
