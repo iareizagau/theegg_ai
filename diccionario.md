@@ -214,6 +214,20 @@ una serie de dispositivos alámbricos o inalámbricos. Comparten información en
 transmitidos mediante impulsos eléctricos.
 Cuentan con emisor, receptor, un mensaje y un medio para transmitir, una serie de códigos/protocolos.
 
+
+## Hacker 
+## Cracker
+## Ataques 
+* **Pentesting:**
+* **XSS:**
+* **Inyección SQL:** 
+* **Informático:**
+* **DDoS:**
+* **ngeniería social:** 
+* **Man-in-the-middle:**
+* **Phising:**
+
+
  
 
 
