@@ -2,6 +2,7 @@ import logging
 import operator
 import pandas as pd
 import re
+import string
 
 logging.basicConfig(
     format='%(asctime)s [%(levelname)s] %(message)s',
@@ -14,13 +15,22 @@ logger = logging.getLogger(__name__)
 class Regex:
     def __init__(self):
         self.words = []
-        self.ranking_words = pd.DataFrame(columns=['word', 'frequency'])
+        self.characters_non_space = 0
+        self.characters = 0
+        self.ranking_words = pd.DataFrame(columns=['word', 'frequency', 'regex', 'diferencia'])
+        self.txt = ''
 
     def count_characters(self, txt):
-        logger.info('número de caracteres {}'.format(len(str(txt))))
+        self.txt = txt
+        self.characters = len(str(txt))
+        self.characters_non_space = len(re.sub(r"\s+", "", self.txt))
+        logger.info('número de caracteres {} (sin espacio {})'.format(
+            self.characters, self.characters_non_space))
 
     def count_words(self, txt):
-        self.words = str(txt).replace('.', '').replace('\n', '').replace('«', '').replace('»', '').replace(',', '')
+        self.txt = txt
+        chars = re.escape(string.punctuation)
+        self.words = re.sub(r'['+chars+"«»\n"+']', "", txt)
         self.words = self.words.lower()
         self.words = self.words.split(' ')
         logger.info('número de palabras {}'.format(len(self.words)))
@@ -28,7 +38,11 @@ class Regex:
     def ranking_words_frequency(self):
         for word in self.words:
             if word != '' and word not in self.ranking_words.values:
-                df = {'word': word, 'frequency': self.words.count(word)}
+                word_count = self.words.count(word)
+                word_count2 = len(re.findall(r'\b{}\b'.format(word), self.txt.lower()))
+                df = {'word': word, 'frequency': word_count,
+                      'regex': word_count2,
+                      'diferencia': word_count - word_count2}
                 self.ranking_words = self.ranking_words.append(df, ignore_index=True)
         self.sort_words_by_frequency()
 
@@ -59,10 +73,7 @@ if __name__ == "__main__":
     se encarga de pensar, y hasta cantamos juntos la canción de Annie.
     Sé que esto último puede sonar raro, ¿quién canta Annie semidesudo y congelado en un paseo de
     Irlanda con un señor que acaba de conocer? Pero? seguro que a ti también te han pasado cosas así."""
-    x = re.findall('se', text)
-    for i in x:
-        print(i)
-    # reg = Regex()
-    # reg.count_characters(text)
-    # reg.count_words(text)
-    # reg.ranking_words_frequency()
+    reg = Regex()
+    reg.count_characters(text)
+    reg.count_words(text)
+    reg.ranking_words_frequency()
