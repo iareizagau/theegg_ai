@@ -53,7 +53,7 @@ class Solitary:
         self.result = []
         self.new_list = []
         self.encrypted_sentence = []
-        self.clave = ''
+        self.clave = 'aaaaaaaaa'
 
     def init_encryption(self, sentence):
         self.sentence = list(''.join(sentence.replace(' ', '').split()))
@@ -85,7 +85,7 @@ class Solitary:
         self.cards.append('B')
 
     def shuffle_clave(self, frase=''):
-        self.clave = self.clave if frase == '' else frase
+        self.clave = self.clave if len(frase) < 2 else frase
         self.create_deck()
         self.letters2numbers()
         for i in range(len(self.clave)):
