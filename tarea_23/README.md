@@ -7,6 +7,17 @@
 1. Función 1: Enviar una frase para que la función lo cifre mediante el solitario. 
 2. Función 2: Recoge el mensaje cifrado y lo descifra utilizando este mismo algoritmo.
 
+## Ejemplo
+<div align="center">
+
+|       sentence        | clave |       encrypt       |        decoded     | 
+| :-------------------: | :---: | :-----------------: | :----------------: |
+| Mi nombre es Imanol   | kaixo |   ngqptgynnfiibckw  |  minombreesimanol  |
+| Egun on               | covid |   wbpdpr            |    buenosdias      |
+
+
+</div>        
+
 ![imagen_diagrama_flujo](solitario_diagrama.jpg)
 
 

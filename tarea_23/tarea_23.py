@@ -15,11 +15,11 @@ def main():
     sentence = input('Introduce sentence to encrypt: ')
 
     solitary = Solitary()
-    encrypt = solitary.encrypt(sentence)
+    encrypt, clave = solitary.encrypt(sentence.lower())
     decoded = solitary.decoded()
     adjust = len(sentence) + 5
-    print('sentence'.ljust(adjust), 'encrypt'.ljust(adjust), 'decoded'.ljust(adjust))
-    print(sentence.ljust(adjust), encrypt.ljust(adjust), decoded.ljust(adjust))
+    print('sentence'.ljust(adjust), 'clave'.ljust(adjust), 'encrypt'.ljust(adjust), 'decoded'.ljust(adjust))
+    print(sentence.ljust(adjust), clave.ljust(adjust), encrypt.ljust(adjust), decoded.ljust(adjust))
 
 
 class Solitary:
@@ -201,7 +201,7 @@ class Solitary:
         self.new_list = [item - len(self.abc) if item > len(self.abc) else item for item in sum_]
         self.new_list = [item - len(self.abc) if item > len(self.abc) else item for item in self.new_list]
         self.numbers2letters()
-        return ''.join(self.encrypted_sentence)
+        return ''.join(self.encrypted_sentence), self.clave
 
     def decoded(self):
         self.init_decoded()
