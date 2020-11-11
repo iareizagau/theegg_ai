@@ -13,11 +13,12 @@
 |       sentence        | clave |       encrypt       |        decoded     | 
 | :-------------------: | :---: | :-----------------: | :----------------: |
 | Mi nombre es Imanol   | kaixo |   ngqptgynnfiibckw  |  minombreesimanol  |
-| Egun on               | covid |   wbpdpr            |    buenosdias      |
+| Egun on               | covid |   wbpdpr            |    egunon      |
 
 
 </div>        
 
+## Diagrama de flujo
 ![imagen_diagrama_flujo](solitario_diagrama.jpg)
 
 
