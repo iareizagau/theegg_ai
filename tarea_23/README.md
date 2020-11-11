@@ -16,16 +16,18 @@
 | Egun on               | covid |   wbpdpr            |    egunon      |
 
 
-
+</div>        
 
 ## Diagrama de flujo
 <div align="center">
+
 ![imagen_diagrama_flujo](solitario_diagrama.jpg)
 
 
 Para entender bien el algoritmo he seguido este video.
 [![Watch the video](solitario.jpg)](https://www.youtube.com/watch?v=uxzLm79aSzw)
 
-</div>        
+</div> 
+
 http://jnicholl.org/Cryptanalysis/Ciphers/Solitaire.php
 
