@@ -44,9 +44,9 @@ Irlanda con un señor que acaba de conocer? Pero? seguro que a ti también te ha
        pip install -r requeriments.txt
  
     5. Ejecutar el código
-       cd path/to/file.py
+       cd path/to/gui.py
        workon env
-       python file.py
+       python gui.py
 
 
 ### Herramientas para probar sintaxis para expresiones regulares
