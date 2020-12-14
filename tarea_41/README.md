@@ -24,10 +24,44 @@ se encarga de pensar, y hasta cantamos juntos la canción de Annie.
 Sé que esto último puede sonar raro, ¿quién canta Annie semidesudo y congelado en un paseo de
 Irlanda con un señor que acaba de conocer? Pero? seguro que a ti también te han pasado cosas así."
 
+
+
+# Pasos para resolver la tarea
 >![imagen_etl](diagrama_flujo_tarea_41.png)
+
+# Para ejecutar el código
+1. Crear un entorno virtual
+    Pip install virtualenvwrapper-win
+    mkvirtualenv --python==path\to\python.exe envname --> C:\usuarios\xxxx\envs
+
+2. Activar entorno virtual
+    workon env
+
+3. Instalar librerías
+    cd path/to/requermients.txt
+    pip install -r requeriments.txt
+
+4. Ejecutar el código
+    cd path/to/file.py
+    workon env
+    python file.py
 
 
 ### Herramientas para probar sintaxis para expresiones regulares
 * https://regex101.com/
 * https://www.online-toolz.com/langs/es/tool-es-regexp-editor.html
 * https://www.metriplica.com/informes-y-estudios-de-analitica-digital/recursos-herramientas-deanalitica/expresiones-regulares/
+
+## Expresiones Regulares
+* . Representa cualquier caracter excepto el salto de línea
+* \w Representa cualquier letra o número
+* \W Representa cualquier caracter que no sea una letra o un numero.
+* \d Representa cualquier numero del 0 al 9
+* \D Representa cualquier caracter que no sea un numero del 0 al 9
+* \s Representa un espacio en blanco
+* \S Representa cualquier caracter que no sea un espacio en blanco.
+* $ Representa que ahí finaliza el texto, por ejemplo la expresión com$ busca que com sea lo último en el texto. Este caracter solo puede usarse al final de la expresión regular.
+* ^ Representa el inicio del texto, por ejemplo la expresión ^hola busca que el texto inicie con hola, este caracter solo puede usarse al inicio de la expresión regular.
+* \b Representa que ahí inicia o finaliza una palabra, por ejemplo la expresión 
+* \b[A-Z][a-z]* busca palabras que inicien con una letra mayúscula y luego lleven cualquier cantidad de letras minúsculas. 
+* \w*os\b busca palabras que finalicen en os.

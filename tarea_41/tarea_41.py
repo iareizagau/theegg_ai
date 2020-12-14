@@ -22,12 +22,13 @@ class Regex:
 
     def count_characters(self, txt):
         self.txt = txt
-        self.characters = len(str(txt))
+        self.characters = len(re.findall(r".", self.txt))
         self.characters_non_space = len(re.sub(r"\s+", "", self.txt))
         logger.info('número de caracteres {} (sin espacio {})'.format(
             self.characters, self.characters_non_space))
 
     def count_words(self, txt):
+        palabras = len(re.findall(r"\w+", self.txt))
         self.txt = txt
         chars = re.escape(string.punctuation)
         self.words = re.sub(r'['+chars+"«»\n"+']', "", txt)

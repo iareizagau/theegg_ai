@@ -214,18 +214,33 @@ una serie de dispositivos alámbricos o inalámbricos. Comparten información en
 transmitidos mediante impulsos eléctricos.
 Cuentan con emisor, receptor, un mensaje y un medio para transmitir, una serie de códigos/protocolos.
 
-
 ## Hacker 
+Persona con un profundo de conocimiento de sistemas y programas informáticos.
+Experto en tecnologías de comunicación e información. Propósitos lícitos.
 ## Cracker
+Experto en tecnologías de comunicación e información con propósitos ilícitos.
 ## Ataques 
-* **Pentesting:**
-* **XSS:**
-* **Inyección SQL:** 
-* **Informático:**
-* **DDoS:**
-* **ngeniería social:** 
-* **Man-in-the-middle:**
-* **Phising:**
+* **Pentesting:** Test de penetración. Atacar un sistema informático para identificar fallos, vulnerabilidades y demás
+errores de seguridad existentes, para así poder prevenir los ataques externos.
+* **XSS (Cross-Site Scripting):** Cuando el atacante inyecta un script en la salida de una aplicación. Ej. una ventana 
+emergente que enlace a otra aplicación web.
+* **Inyección SQL:** Fragmentos de código que se introduce utilizando una puerta de entrada como formularios, para 
+información sobre esa base de datos o alterarlas. 
+* **Ataque Informático:** Desestabilizar un sistéma informático, robo de información, corromper códigos, generando 
+consecuencias que vulneran la seguridad de los sistemas de información.
+* **DDoS (denegación de servicio):** Sobrecargar el servidor con muchas solicitudes y hacer caer el servidor. 
+* **Ingeniería social:** Manipular personas para compartir su información confidencial.
+Un pendrive  
+* **Man in the middle:** Intercepción de la comunicación entre dos sistemas por una entidad externa.
+* **Phising:** Método para engañar y hacer compartir contraseñas, nº de crédito, ... haciendose pasar por una 
+institución de confianza en un mensaje de correo electrónico. 
+
+## Bases de datos
+* **Relacionales | SQL:** Lenguaje de programación para trabajar con bases de datos. 
+    1. MySQL
+    2. postgreSQL
+* **NO relacionales | NoSQL**Forma flexible de almacenar, ordenar y captar mayor cantidad de datos. 
+    1. MongoDB
 
 
  
