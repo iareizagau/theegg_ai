@@ -30,18 +30,20 @@ Irlanda con un señor que acaba de conocer? Pero? seguro que a ti también te ha
 >![imagen_etl](diagrama_flujo_tarea_41.png)
 
 ### Para ejecutar el código
-    1. Crear un entorno virtual
+    1. Descargar la carpeta tarea_41
+    
+    2. Crear un entorno virtual
        Pip install virtualenvwrapper-win
        mkvirtualenv --python==path\to\python.exe envname --> C:\usuarios\xxxx\envs
 
-    2. Activar entorno virtual
+    3. Activar entorno virtual
        workon env
 
-    3. Instalar librerías
+    4. Instalar librerías
        cd path/to/requermients.txt
        pip install -r requeriments.txt
-
-    4. Ejecutar el código
+ 
+    5. Ejecutar el código
        cd path/to/file.py
        workon env
        python file.py

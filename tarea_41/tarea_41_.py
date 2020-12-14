@@ -26,10 +26,12 @@ class Regex:
         self.characters_non_space = len(re.sub(r"\s+", "", self.txt))
         logger.info('número de caracteres {} (sin espacio {})'.format(
             self.characters, self.characters_non_space))
+        return {'characters': self.characters, 'characters_non_space': self.characters_non_space}
 
     def count_words(self):
         self.words = re.findall(r"\w+", self.txt)
         logger.info('número de palabras {}'.format(len(self.words)))
+        return len(self.words)
 
     def ranking_words_frequency(self):
         for word in self.words:
@@ -41,11 +43,13 @@ class Regex:
                       'regex': len(word_count2),
                       'diferencia': word_count - len(word_count2)}
                 self.ranking_words = self.ranking_words.append(df, ignore_index=True)
-        self.sort_words_by_frequency()
+        return self.sort_words_by_frequency()
 
     def sort_words_by_frequency(self):
+        self.count_words()
         self.ranking_words = self.ranking_words.sort_values('frequency', ascending=False)
-        logger.info(self.ranking_words)
+        logger.info(str(self.ranking_words))
+        return self.ranking_words
 
     def normalize(self, txt):
         replacements = (
