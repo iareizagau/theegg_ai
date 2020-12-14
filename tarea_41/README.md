@@ -70,11 +70,11 @@ Irlanda con un señor que acaba de conocer? Pero? seguro que a ti también te ha
 
 <div align="center">
 
-| Funcion                       | Expresión                                        |
-| :---------------------------- | :----------------------------------------------- |
-| **Encontrar carácteres**      | **re.findall(r".", self.txt)**                   |
-| **Carácteres sin espacios**   | **re.sub(r"\s+", "", self.txt)**                 |
-| **Palabras**                  | **re.findall(r"\w+", self.txt)**                 |
-| **Contar palabras repetidas** | **re.findall(r'\b{}\b'.format(word), self.txt)** |
+| Funcion                       | Expresión                                   |
+| :---------------------------- | :------------------------------------------ |
+| **Encontrar carácteres**      | **re.findall(r".", txt)**                   |
+| **Carácteres sin espacios**   | **re.sub(r"\s+", "", txt)**                 |
+| **Palabras**                  | **re.findall(r"\w+", txt)**                 |
+| **Contar palabras repetidas** | **re.findall(r'\b{}\b'.format(word), txt)** |
 
 </div>
