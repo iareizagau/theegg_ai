@@ -70,8 +70,8 @@ Irlanda con un señor que acaba de conocer? Pero? seguro que a ti también te ha
 
 <div align="center">
 
-| Funcion                       | Expresión                                     |
-| :---------------------------: | :----------------------------------------------: |
+| Funcion                       | Expresión                                        |
+| :---------------------------- | :----------------------------------------------- |
 | **Encontrar carácteres**      | **re.findall(r".", self.txt)**                   |
 | **Carácteres sin espacios**   | **re.sub(r"\s+", "", self.txt)**                 |
 | **Palabras**                  | **re.findall(r"\w+", self.txt)**                 |
