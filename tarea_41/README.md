@@ -29,7 +29,7 @@ Irlanda con un señor que acaba de conocer? Pero? seguro que a ti también te ha
 # Pasos para resolver la tarea
 >![imagen_etl](diagrama_flujo_tarea_41.png)
 
-# Para ejecutar el código
+### Para ejecutar el código
     1. Crear un entorno virtual
        Pip install virtualenvwrapper-win
        mkvirtualenv --python==path\to\python.exe envname --> C:\usuarios\xxxx\envs
@@ -65,3 +65,16 @@ Irlanda con un señor que acaba de conocer? Pero? seguro que a ti también te ha
 * **\b** Representa que ahí inicia o finaliza una palabra, por ejemplo la expresión 
 * **\b[A-Z][a-z]** busca palabras que inicien con una letra mayúscula y luego lleven cualquier cantidad de letras minúsculas. 
 * **\w*os\b** busca palabras que finalicen en os.
+
+### Expresiones Regulares usados en la tarea:
+
+<div align="center">
+
+| Funcion                       | Expresión                                     |
+| :---------------------------: | :----------------------------------------------: |
+| **Encontrar carácteres**      | **re.findall(r".", self.txt)**                   |
+| **Carácteres sin espacios**   | **re.sub(r"\s+", "", self.txt)**                 |
+| **Palabras**                  | **re.findall(r"\w+", self.txt)**                 |
+| **Contar palabras repetidas** | **re.findall(r'\b{}\b'.format(word), self.txt)** |
+
+</div>
