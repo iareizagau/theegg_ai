@@ -241,6 +241,12 @@ institución de confianza en un mensaje de correo electrónico.
     2. postgreSQL
 * **NO relacionales | NoSQL**Forma flexible de almacenar, ordenar y captar mayor cantidad de datos. 
     1. MongoDB
+    
+## Notación asintótica
+## Notación Big O
+Técnicas/metodologías para planificar el comportamiento de los algoritmos. Trata de medir el número de pasos del 
+algoritmo para resolver el problema.
+## Algoritmos de ordenación
 
 
  
