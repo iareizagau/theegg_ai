@@ -10,7 +10,7 @@ Requisitos:
 * ir a la carpeta de la tarea --> cd path/to/project
 * ejecutar el archivo **gui.py** --> python gui.py
 
-He utilizado **Qt Creator** para crear la interfaz gráfica
+He utilizado **Qt Creator** para crear la interfaz gráfica. Para descargar versión gratuita: https://www.qt.io/
 
-Para descargar versión gratuita: https://www.qt.io/ 
+Resultado: 
 ![imagen_etl](tarea_44.jpg)
