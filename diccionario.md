@@ -248,6 +248,22 @@ Técnicas/metodologías para planificar el comportamiento de los algoritmos. Tra
 algoritmo para resolver el problema.
 ## Algoritmos de ordenación
 
+## Estadística descriptiva 
+## Análisis exploratorio 
+## Dato estructurado 
+## Dato semiestructurado 
+## Dato noestructurado
+
+## Herramientas de Business-Intelligence 
+## Calidad-del-dato 
+## Análisis-exploratorio 
+## Estadística-descriptiva
+## histograma 
+## Gráfico de barras 
+## Gráfico circular
+## Gráfico de dispersión
+## Gráfico de caja y bigotes
+## Cartograma
 
  
 

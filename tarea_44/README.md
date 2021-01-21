@@ -21,7 +21,8 @@ lenguaje de programación que desees:
 Requisitos:
 * python 3.8
 * librerías: matplotlib, pandas, PyQt5 --> pip install -r requeriments.txt
-* ir a la carpeta de la tarea --> cd path/to/project
+* descargar la tarea_44
+* ir a la carpeta de la tarea --> cd path/to/tarea
 * ejecutar el archivo **gui.py** --> python gui.py
 
 He utilizado **Qt Creator** para crear la interfaz gráfica. Para descargar versión gratuita: https://www.qt.io/

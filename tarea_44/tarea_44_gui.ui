@@ -14,22 +14,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="photo">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>190</y>
-      <width>541</width>
-      <height>461</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../../../../../AUTOCORT/autocort_python/src/plot/perfil_kpi.png</pixmap>
-    </property>
-   </widget>
    <widget class="QPushButton" name="ButtonRun">
     <property name="geometry">
      <rect>
@@ -51,22 +35,6 @@
       <width>421</width>
       <height>121</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="photo_2">
-    <property name="geometry">
-     <rect>
-      <x>580</x>
-      <y>190</y>
-      <width>731</width>
-      <height>471</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../../../../../AUTOCORT/autocort_python/src/plot/perfil_kpi.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -538,6 +506,32 @@
     </property>
     <property name="text">
      <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="photo">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>220</y>
+      <width>491</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="photo_2">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>220</y>
+      <width>491</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>
