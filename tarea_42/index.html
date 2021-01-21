@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AI - The Egg">
+    <meta name="author" content="SitePoint">
+    <link rel="shortcut icon" type="image/jpg" href="favicon.jpg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="artyom-source/artyom.window.min.js"></script>
+
+
+
+    <title>Speak in English</title>
+
+    <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+</head>
+
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+<div class="jumbotron text-center"
+     style="background-image:  url(style/hand-painted-watercolor-background-with-sky-clouds-shape.jpg);">
+    <h1>Speak in English</h1>
+    <p>Improve your pronunctiation skills</p>
+</div>
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">English</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Françoise</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Español</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Italiano</a>
+  </li>
+</ul>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p>Welcome. My name is Lisa. Let's practice English. Speak to me and I'll write what you say</p>
+            <p>Practice your pronunctiation and say play and stop to manage de video. Click on start voice button before
+                start speaking.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <input type="button" class="btn btn-primary btn-sm" onclick="startArtyom()" value="Start voice"/><br>
+        </div>
+        <div class="col-sm-4">
+            You:
+        </div>
+        <div class="col-sm-4">
+            <span id="output"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <input type="button" class="btn btn-info btn-sm" onclick="repeatArtyom()" value="Repeat"/><br>
+        </div>
+        <div class="col-sm-4">
+            Lisa:
+        </div>
+        <div class="col-sm-4">
+            <span id="output2"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            Voice Speed
+        </div>
+        <div class="col-sm-4">
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange" onchange=UpdateSlider()>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            x <span id="outputVar"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <input type="button" class="btn btn-dark btn-sm" onclick="stopArtyom()" value="Stop listening"/><br>
+        </div>
+        <div class="col-sm-4">
+            <video id="myvideo" controls preload="metadata" src="video/sample-mp4-file.mp4">
+                Video not found
+            </video>
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+</div>
+
+
+<script src="js/functions.js"></script>
+<script src="artyom-source/artyom.window.js"></script>
+</body>
+<!-- Site footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <br class="text-justify"><i>CODE WANTS TO BE SIMPLE </i> <br> The Egg AI school excercise</br></p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Languages</h6>
+                <ul class="footer-links">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Françoise</a></li>
+                    <li><a href="#">Español</a></li>
+                    <li><a href="#">Italiano</a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="https://theegg.ai/">About Us</a></li>
+                    <li><a href="https://theegg.ai/">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+                    <a href="#">Imanol Areizaga</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
