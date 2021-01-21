@@ -33,6 +33,6 @@ SELECT Username, PassowrdHas FROM members ORDER BY Username DESC, PasswordHash D
 #### SELECT * FROM table ORDER BY column ASC LIMIT 5;
 SELECT * FROM subscribers ORDER BY Purchases ASC, Username DESC LIMIT 5;
 
-[imagen_etl](end_trial.jpg)
+![imagen_etl](end_trial.jpg)
 
 
