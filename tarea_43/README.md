@@ -23,7 +23,7 @@ SELECT * FROM subscribers ORDER BY Address ASC;
 
 ## Order by column in descending order
 #### SELECT columns FROM table ORDER BY column DESC;
-SELECT * FROM members ORDER BY JoinedOn ASC;
+SELECT * FROM members ORDER BY JoinedOn DESC;
 
 ## Order by two columns descending
 #### SELECT * FROM table ORDER BY column1 DESC, column2 DESC;
