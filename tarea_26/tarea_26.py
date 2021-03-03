@@ -3,19 +3,43 @@ import pandas as pd
 import json
 import matplotlib.pyplot as plt
 from datetime import datetime
+from utils_pandas import Pandas
+import numpy as np
+
+pd.plotting.register_matplotlib_converters()
+# %matplotlib inline
+import seaborn as sns
+
+desired_width = 270
+np.set_printoptions(linewidth=desired_width)
+pd.set_option('display.width', desired_width)
+pd.set_option('display.max_columns', 21)
 
 
-class covid19:
-    def __init__(self):
+class Covid19:
+    def __init__(self, pandas):
+        self.pd = pandas
         path_json = 'https://opendata.euskadi.eus/contenidos/ds_informes_estudios/covid_19_2020/opendata/generated/covid19-pcr.json'
         self.path_json = ''
         self.path_file_json = 'data.json'
         self.df = pd.DataFrame()
+        self.__init__fechas_clave()
+
+    def __init__fechas_clave(self):
+        self.estado_alarma1 = datetime.strptime('2020-03-14T22:00:00Z', '%Y-%m-%dT%H:%M:%SZ')
+        self.desescalada_fase0 = datetime.strptime('2020-05-15T22:00:00Z', '%Y-%m-%dT%H:%M:%SZ')
+        self.desescalada_fase1 = datetime.strptime('2020-05-20T22:00:00Z', '%Y-%m-%dT%H:%M:%SZ')
+        self.desescalada_fase2 = datetime.strptime('2020-06-10T22:00:00Z', '%Y-%m-%dT%H:%M:%SZ')
+        self.desescalada_fase3 = datetime.strptime('2020-06-21T22:00:00Z', '%Y-%m-%dT%H:%M:%SZ')
+        self.restriccion_perimetral1_on = datetime.strptime('2020-10-31T22:00:00Z', '%Y-%m-%dT%H:%M:%SZ')
+        self.restriccion_perimetral1_off = datetime.strptime('2020-12-12T22:00:00Z', '%Y-%m-%dT%H:%M:%SZ')
+        self.restriccion_perimetral2_on = datetime.strptime('2021-01-25T22:00:00Z', '%Y-%m-%dT%H:%M:%SZ')
+        self.restriccion_perimetral2_off = datetime.strptime('2021-02-15T22:00:00Z', '%Y-%m-%dT%H:%M:%SZ')
 
     def covid19_pcr_positivos(self):
         self.path_json = 'https://opendata.euskadi.eus/contenidos/ds_informes_estudios/covid_19_2020/opendata/generated/covid19-pcr-positives.json'
         json_data = self.get_data()
-        self.df = pd.DataFrame({'dates': json_data['dates'],
+        self.df = pd.DataFrame({'date_time': json_data['dates'],
                                 'menCount': json_data['menCount'],
                                 'womenCount': json_data['womenCount'],
                                 'age_0_9_Count': json_data['age_0_9_Count'],
@@ -28,10 +52,15 @@ class covid19:
                                 'age_70_79_Count': json_data['age_70_79_Count'],
                                 'age_80_89_Count': json_data['age_80_89_Count'],
                                 'age_90_X_Count': json_data['age_90_X_Count']})
-        # print(self.df['dates'].values[0], type(self.df['dates'].values[0]))
-        # print(self.df['dates'].values)
-        self.df['month'] = [datetime.strptime(date, '%Y-%m-%dT%H:%M:%SZ').strftime('%B') for date in self.df['dates'].values]
+        dates = self.df['date_time'].values
+        self.df['month'] = [datetime.strptime(date, '%Y-%m-%dT%H:%M:%SZ').strftime('%B') for date in dates]
+        self.df['date'] = [datetime.strptime(date, '%Y-%m-%dT%H:%M:%SZ').date() for date in dates]
+        self.df['weeknumber'] = [datetime.strptime(date, '%Y-%m-%dT%H:%M:%SZ').isocalendar()[1] for date in dates]
+        self.df['all_infected'] = self.df['menCount'] + self.df['womenCount']
+        df_mean_week = self.pd.group_data(self.df, 'weeknumber', 'mean')
         print(self.df.head())
+        self.plot_weekly(df_mean_week)
+        # self.plot_covid19_pcr_positivos(self.df)
 
     def covid19_deceased(self):
         self.path_json = 'https://opendata.euskadi.eus/contenidos/ds_informes_estudios/covid_19_2020/opendata/generated/covid19-deceasedPeopleCount.json'
@@ -86,19 +115,47 @@ class covid19:
     def process_data(self):
         pass
 
-    def plot(self):
-        # self.df.plot(kind='line', y=['menCount', 'womenCount'])
-        self.df.plot(kind='line', x='month',
-                     y=["age_0_9_Count", "age_10_19_Count", "age_20_29_Count", "age_30_39_Count",
-                        "age_40_49_Count", "age_50_59_Count", "age_60_69_Count", "age_70_79_Count",
-                        "age_80_89_Count", "age_90_X_Count"],
-                     figsize=(40, 20))
-        plt.xticks(rotation=0)
-        plt.xlabel('Date')
-        plt.ylabel('Infectios per day')
+    def plot_covid19_pcr_positivos(self, df):
+        ax = self.pd.plot_analisis(df=df,
+                                   sort_variable=None,
+                                   kind='line',
+                                   x='date',
+                                   y=["age_0_9_Count", "age_10_19_Count", "age_20_29_Count", "age_30_39_Count",
+                                      "age_40_49_Count", "age_50_59_Count", "age_60_69_Count", "age_70_79_Count",
+                                      "age_80_89_Count", "age_90_X_Count"],
+                                   xlabel='Date', ylabel='Infectios per day',
+                                   title='Infectios per day', figsize=(40, 20), ylim=[0, 300],
+                                   rot=0, stacked=False,
+                                   fontsize=10, xlim=None)
+        self.plot_fechas_clave(ax)
         plt.show()
+
+    def plot_weekly(self, df):
+        ax = self.pd.plot_analisis(df=df,
+                                   sort_variable=None,
+                                   kind='line',
+                                   x='date',
+                                   y=["all_infected"],
+                                   xlabel='Date', ylabel='Infectios per day',
+                                   title='Infectios per day', figsize=(40, 20), ylim=[0, 300],
+                                   rot=0, stacked=False,
+                                   fontsize=10, xlim=None)
+        self.plot_fechas_clave(ax)
+        plt.show()
+
+    def plot_fechas_clave(self, ax):
+        ax.axvline(self.estado_alarma1, color="red", linestyle="-")
+        ax.axvline(self.desescalada_fase0, color="red", linestyle="--")
+        ax.axvline(self.desescalada_fase1, color="orange", linestyle="--")
+        ax.axvline(self.desescalada_fase2, color="yellow", linestyle="--")
+        ax.axvline(self.desescalada_fase3, color="green", linestyle="--")
+        ax.axvline(self.restriccion_perimetral1_on, color="black", linestyle="--")
+        ax.axvline(self.restriccion_perimetral1_off, color="green", linestyle="--")
+        ax.axvline(self.restriccion_perimetral2_on, color="black", linestyle="--")
+        ax.axvline(self.restriccion_perimetral2_off, color="green", linestyle="--")
 
 
 if __name__ == '__main__':
-    covid = covid19()
-    covid.covid19_epidemic_status()
+    pandas = Pandas(None)
+    covid = Covid19(pandas)
+    covid.covid19_pcr_positivos()

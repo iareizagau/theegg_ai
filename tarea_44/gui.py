@@ -22,15 +22,12 @@ class GraphicUserInterface(QMainWindow):
 
         # Output
 
-
-
     def btn_run(self):
         b = BigO()
         txt = b.main()
         self.textBrowser.setText(txt)
         self.photo.setPixmap(QtGui.QPixmap("./plot_num_procesos.jpg"))
         self.photo_2.setPixmap(QtGui.QPixmap("./plot_time_ejecucion.jpg"))
-
 
     @staticmethod
     def btn_exit():
