@@ -27,7 +27,6 @@ class Sort:
         for iterations, element in enumerate(self.elements):
             if element == x:
                 break
-        # print(f'len {len(self.elements)} iterations sequential {iterations}')
         self.iter_sequential = iterations
         return iterations, len(self.elements)
 
@@ -43,7 +42,6 @@ class Sort:
             elif elements_copy[index] < x:
                 elements_copy = elements_copy[index:]
             self.iter_binary += 1
-        # print(f'len {len(self.elements)} iterations binary {self.iter_binary}')
 
     def analisis_big_o(self):
         for i in range(1000):
@@ -72,6 +70,6 @@ class Sort:
 if __name__ == '__main__':
     s = Sort()
     s.analisis_big_o()
-    # s.selection_sort([3, 56, 21, 33, 874, 123, 66, 1000, 23, 45, 65, 56])
-    # s.binary(875)
-    # s.sequential(875)
+    s.selection_sort([3, 56, 21, 33, 874, 123, 66, 1000, 23, 45, 65, 56])
+    s.binary(875)
+    s.sequential(875)

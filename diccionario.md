@@ -265,6 +265,26 @@ algoritmo para resolver el problema.
 ## Gráfico de caja y bigotes
 ## Cartograma
 
+# **Ciberseguridad**
+## **Ataques** 
+* **Pentesting:** Test de penetración. Atacar un sistema informático para identificar fallos, vulnerabilidades y demás
+errores de seguridad existentes, para así poder prevenir los ataques externos.
+* **XSS (Cross-Site Scripting):** Cuando el atacante inyecta un script en la salida de una aplicación. Ej. una ventana 
+emergente que enlace a otra aplicación web.
+* **Inyección SQL:** Fragmentos de código que se introduce utilizando una puerta de entrada como formularios, para 
+información sobre esa base de datos o alterarlas. 
+* **Ataque Informático:** Desestabilizar un sistéma informático, robo de información, corromper códigos, generando 
+consecuencias que vulneran la seguridad de los sistemas de información.
+* **DDoS (denegación de servicio):** Sobrecargar el servidor con muchas solicitudes y hacer caer el servidor. 
+* **Ingeniería social:** Manipular personas para compartir su información confidencial.
+Un pendrive  
+* **Man in the middle:** Intercepción de la comunicación entre dos sistemas por una entidad externa.
+* **Phising:** Método para engañar y hacer compartir contraseñas, nº de crédito, ... haciendose pasar por una 
+institución de confianza en un mensaje de correo electrónico. 
+* **ransomware** 
+* **spyware** 
+* **troyano**
+
  
 
 
