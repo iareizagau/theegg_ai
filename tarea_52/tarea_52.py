@@ -39,7 +39,10 @@ class Listas:
     def solicitar_numero2(self):
         print('Crear una lista con los elementos de la listas original que sean menores que el número dado')
         np_lista = np.array(self.lista)
-        print(np_lista < float(input('Introduce nuevo numero para crear una lista: ')))
+        num = float(input('Introduce nuevo numero para crear una lista: '))
+        print(np_lista < num)
+        np_lista = np_lista[np_lista < num]
+        print(f'np_lista {np_lista}')
         for i, value in enumerate(np_lista):
             print(f'{i}, {value}')
 
@@ -82,9 +85,11 @@ class Listas:
         lista_primaria_copy = lista_primaria.copy()
         lista_secundaria = self.secundaria()
 
-        # lista = []
-        # lista.extend(lista_primaria)
-        # lista.extend(lista_secundaria)
+        lista_nombres = []
+        lista_nombres.extend(lista_primaria)
+        lista_nombres.extend(lista_secundaria)
+
+        self.nombres_sin_repeticiones(lista_nombres)
 
         for nombre_primaria in lista_primaria:
             if nombre_primaria in lista_secundaria:
@@ -94,6 +99,10 @@ class Listas:
 
         print(f'Los nombres de nivel primario que no se repiten en en los de nivel secundario son \n'
               f' {lista_primaria_copy}')
+
+    def nombres_sin_repeticiones(self, lista_nombres):
+        lista_n = set(lista_nombres)
+        print(lista_n)
 
 
 if __name__ == '__main__':
