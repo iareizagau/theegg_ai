@@ -12,6 +12,7 @@ class Sort:
         pass
 
     def selection_sort(self, nums):
+        print('sort in ascent order')
         print(f'Before {nums}')
         for i in range(len(nums)):
             lowest_value_index = i
@@ -42,8 +43,10 @@ class Sort:
             elif elements_copy[index] < x:
                 elements_copy = elements_copy[index:]
             self.iter_binary += 1
+        return self.iter_binary, len(self.elements)
 
     def analisis_big_o(self):
+        print('Analisis of BigO')
         for i in range(1000):
             for _ in range(100):
                 self.elements.append(random.randint(0, 1000))
@@ -69,7 +72,10 @@ class Sort:
 
 if __name__ == '__main__':
     s = Sort()
-    s.analisis_big_o()
+
     s.selection_sort([3, 56, 21, 33, 874, 123, 66, 1000, 23, 45, 65, 56])
-    s.binary(875)
-    s.sequential(875)
+    iter_binary, elements_binary = s.binary(875)
+    print(f'elements in the list: {elements_binary} | number of iterations {iter_binary}')
+    iter_seq, elements_seq = s.sequential(875)
+    print(f'elements in the list: {elements_seq} | number of iterations {iter_seq}')
+    s.analisis_big_o()
