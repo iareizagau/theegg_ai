@@ -14,7 +14,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /// <reference path="artyom.d.ts" />
 // Remove "export default " keywords if willing to build with `npm run artyom-build-window`
 var Artyom = (function () {
-    // Triggered at the declaration of 
+    // Triggered at the declaration of
     function Artyom() {
         this.ArtyomCommands = [];
         this.ArtyomVoicesIdentifiers = {
