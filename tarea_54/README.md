@@ -1,3 +1,14 @@
+# Pentesting
+Métodos para poder evaluar los sistemas de información
+y la red digital de una organización simulando un ataque. Un asalto lanzado desde la propia
+organización o proveedor para encontrar vulnerabilidades que permitan a potenciales atacantes robar
+información o afectar a sus activos (inyección SQL, malware, ataques DoS, etcétera). 
+Propósito: Analizar las medidas y controles de seguridad para detectar debilidades, fallos técnicos y
+vulnerabilidades.
+
+Los tests de intrusión realizados deben ir
+precedidas de un acuerdo firmado donde se defina el alcance del mismo, así como las restricciones y/o
+limitaciones de las pruebas. 
 # Tipos de pentesting
 1. Black Box: Los pentesters no disponen de conocimiento previo acerca de la infraestructura que va a
 ser probada. Es lo más parecido a un ataque real. Suele ser realizado por personal especializado externo
