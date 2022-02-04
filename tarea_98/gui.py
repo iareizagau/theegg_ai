@@ -1,15 +1,15 @@
 import sys
 from PyQt5 import uic, QtGui
 from PyQt5.QtWidgets import QMainWindow, QApplication
-from tarea_44 import BigO
+from tarea_98 import BigO
 
 
 class GraphicUserInterface(QMainWindow):
     def __init__(self):
         super().__init__()
-        path_ui = './tarea_44_gui.ui'
+        path_ui = 'tarea_98_gui.ui'
         uic.loadUi(path_ui, self)
-        self.setWindowTitle('Tarea 44 - Big O')
+        self.setWindowTitle('Tarea 98 - Big O')
         # Buttons
         self.ButtonRun.setEnabled(True)
         self.exit.setEnabled(True)

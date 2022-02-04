@@ -10,7 +10,7 @@ Se ha utilizado Técnicas/metodologías O Grande (Big O Notation) para analizar 
 que trata de medir son el número de pasos.
 
 Resultado: 
-![imagen_etl](tarea_44.jpg)
+![imagen_etl](tarea_98.jpg)
 
 Programar el problema que se plantea en la siguiente secuencia de videos en el
 lenguaje de programación que desees:
