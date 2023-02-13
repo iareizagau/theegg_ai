@@ -1,0 +1,13 @@
+﻿id_cliente;nombre;apellido;fecha_nacimiento;direccion;telefono;fecha_alta
+4;Mihaela ;González;14/06/1990;mi super direccion 4;(+34) 600000002;22/05/2021
+5;Alicia ;Etxepare;07/05/1989;mi super direccion 5;(+34) 600000003;22/05/2021
+6;Bernardo ;Martínez;08/09/1980;mi super direccion 6;(+34) 600000004;23/07/2021
+7;Nadia;Huizi;08/08/2000;mi super direccion 7;(+34) 600000005;24/08/2022
+8;Mario;Gómez;22/02/1978;mi super direccion 8;(+34) 600000006;15/05/2020
+9;Mara;García;25/05/1990;mi super direccion 9;(+34) 600000007;03/03/2020
+10;Elena;Williams;03/06/2002;mi super direccion 10;(+34) 600000008;05/06/2022
+11;José;Herrera;07/12/1985;mi super direccion 11;(+34) 600000009;14/06/2022
+12;Pedro;Belda;18/11/1981;mi super direccion 12;(+34) 600000010;18/04/2021
+13;Feliciano;Berasain;18/04/1991;mi super direccion 13;(+34) 600000011;19/09/2022
+14;Esusebio;Zuñiga;15/07/1973;mi super direccion 14;(+34) 600000012;25/05/2018
+15;Iryna;Goeanaga;28/12/1998;mi super direccion 15;(+34) 600000013;23/10/2021
